@@ -71,6 +71,10 @@ jobs:
         with:
           tag_name: "latest"
           name: "Latest droidian-phoc build"
-          files: /tmp/results/*.deb
+          files: |
+            buildd-results/*.deb
+            buildd-results/*.ddeb
+            buildd-results/*.changes
+            buildd-results/*.buildinfo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
